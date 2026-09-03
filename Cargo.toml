@@ -14,23 +14,27 @@ rust_2018_idioms = { level = "warn", priority = -1 }
 [lints.clippy]
 # groups first, negative priority so individual entries below override
 pedantic = { level = "warn", priority = -1 }
-restriction = { level = "warn", priority = -1 }
-
 # --- deny: Should always be avoided ---
-dbg_macro = "deny"
 mem_forget = "deny"
 undocumented_unsafe_blocks = "deny"
 float_cmp = "deny"
 lossy_float_literal = "deny"
 rest_pat_in_fully_bound_structs = "deny"
 allow_attributes_without_reason = "deny"
+panic_in_result_fn = "deny"
 
-# --- warn: contingently allowed ---
+# --- warn: allowed pre commit ---
 unwrap_used = "warn"
+expect_used = "warn"
+exit = "warn"
 todo = "warn"
+panic = "warn"
 unimplemented = "warn"
 clone_on_ref_ptr = "warn"
 verbose_file_reads = "warn"
-exit = "warn"
 assertions_on_result_states = "warn"
 arithmetic_side_effects = "warn"
+debug_assert_with_mut_call = "warn"
+dbg_macro = "warn"
+string_slice = "warn"
+indexing_slicing = "warn"
