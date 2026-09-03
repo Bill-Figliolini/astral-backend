@@ -24,6 +24,7 @@ allow_attributes_without_reason = "deny"
 panic_in_result_fn = "deny"
 
 # --- warn: allowed pre commit ---
+# General panics
 unwrap_used = "warn"
 expect_used = "warn"
 exit = "warn"
@@ -33,8 +34,12 @@ unimplemented = "warn"
 clone_on_ref_ptr = "warn"
 verbose_file_reads = "warn"
 assertions_on_result_states = "warn"
+# Arithmetic safety
 arithmetic_side_effects = "warn"
+unchecked_time_subtraction = "warn"
+as_conversions = "warn"
 debug_assert_with_mut_call = "warn"
 dbg_macro = "warn"
+#slice safety
 string_slice = "warn"
 indexing_slicing = "warn"
