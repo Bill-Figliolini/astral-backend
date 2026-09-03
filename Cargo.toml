@@ -25,6 +25,7 @@ panic_in_result_fn = "deny"
 
 # --- warn: allowed pre commit ---
 unwrap_used = "warn"
+expect_used = "warn"
 exit = "warn"
 todo = "warn"
 panic = "warn"
