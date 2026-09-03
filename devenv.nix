@@ -1,4 +1,4 @@
-{ pkgs, lib, config, inputs, ... }:
+{ pkgs, ... }:
 
 {
   languages.rust = {
@@ -6,11 +6,12 @@
     channel = "nightly";
     components = [ "rustc" "cargo" "clippy" "rust-analyzer" ];
   };
-  packages = with pkgs; [ 
+  packages = with pkgs; [
     bacon
     cargo-seek
     cargo-nextest
     cargo-llvm-cov
+    cargo-generate
   ];
   scripts.watcher = {
     exec = ''
@@ -25,5 +26,6 @@
   '';
   git-hooks.hooks = {
       clippy.enable = true;
+      clippy.settings.denyWarnings = true;
   };
 }
